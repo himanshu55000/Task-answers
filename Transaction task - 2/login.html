@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+var valid=function(){
+	var user = document.forms["login"]["user"].value;
+	var pass = document.forms["login"]["pass"].value;
+	if(user=='admin'&&pass=='root')
+		return true;
+	else{
+		alert('Username and password incorrect');
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<form  name="login" action="transaction.html" onsubmit="return valid()">
+<table>
+<tr><td>Enter Username</td>
+<td><input name="user"></td></tr>
+<tr><td>Enter password</td>
+<td><input name="pass" type="password"></td></tr>
+<tr><td clospan="2"><input type="submit"></td></tr>
+</table>
+</form>
+</body>
+</html>
